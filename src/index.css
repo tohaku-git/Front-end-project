@@ -1,13 +1,98 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: "Karla";
+  text-align: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+ul {
+  list-style: none;
 }
+
+a {
+  text-decoration: none;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+}
+
+
+/* header */
+
+#headerContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr 3fr 1fr;
+  column-gap: 20px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#headerImg {
+  grid-column: 2 / 3;
+}
+
+#navContainer {
+  grid-column: 3 / 4;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+#navList {
+  display: flex;
+  justify-content: space-evenly;
+  padding-left: 0px;
+}
+
+#navList > li > a {
+  color: #333333;
+}
+
+@media (max-width: 1200px) {
+  #headerContainer {
+    grid-template-columns: 1fr 4fr 1fr;
+  }
+  #navContainer {
+    grid-column: 2 / 3;
+  }
+  #navList {
+    flex-flow: column;
+  }
+}
+
+/* footer */
+
+#footerContainer {
+  background-color: #EDEFEE;
+  display: grid;
+  grid-template-columns: 1fr 4fr 1fr;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+#footerItems {
+  grid-column: 2 / 3;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footerHeading {
+  font-size: 20px;
+  color: #333333;
+}
+
+.footerList {
+  text-align: center;
+  padding-left: 0px;
+}
+
+.footerList > li > a {
+  font-size: 18px;
+  color: #495E57;
+}
+
+@media (max-width: 1200px) {
+  #footerItems {
+    flex-flow: column;
+  }
+}
+

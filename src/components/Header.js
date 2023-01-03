@@ -1,19 +1,13 @@
 import Logo from '../images/Asset 16@4x.png';
+import Nav from './Nav';
 
 const Header = () => {
     return (
-        <header>
-            <img src={Logo} alt="Logo"/>
-            <nav>
-                <ul>
-                    <li><a href="/">HOME</a></li>
-                    <li><a href="/about/">ABOUT</a></li>
-                    <li><a href="/menu/">MENU</a></li>
-                    <li><a href="/reservation/">RESERVATIONS</a></li>
-                    <li><a href="/order/">ORDER ONLINE</a></li>
-                    <li><a href="/login/">LOGIN</a></li>
-                </ul>
-            </nav>
+        <header id="headerContainer">
+            <div id="headerImg" >
+                <img src={Logo} alt="Logo" width="200" />
+            </div>
+            <Nav/>
         </header>
     )
 }
