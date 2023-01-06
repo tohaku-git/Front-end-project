@@ -1,6 +1,9 @@
 body {
   font-family: "Karla";
   text-align: center;
+  color: #333333;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
 }
 
 ul {
@@ -9,12 +12,39 @@ ul {
 
 a {
   text-decoration: none;
+  color: #333333;
 }
 
-.container {
-  display: grid;
-  grid-template-rows: auto 1fr auto;
+h1 {
+  font-family: "Markazi Text";
+  font-size: 64px;
+  font-weight: medium;
+  text-align: left;
+  margin-bottom: 0;
 }
+
+h2 {
+  font-family: "Markazi Text";
+  font-size: 40px;
+  font-weight: normal;
+  text-align: left;
+  margin-top: 0;
+}
+
+p {
+  text-align: left;
+}
+
+button {
+  background-color: #F4CE14;
+  width: 200px;
+  height: 50px;
+  border-radius: 16px;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+}
+
 
 
 /* header */
@@ -31,32 +61,240 @@ a {
   grid-column: 2 / 3;
 }
 
+/* nav */
+
 #navContainer {
   grid-column: 3 / 4;
   font-weight: bold;
   font-size: 18px;
 }
 
-#navList {
-  display: flex;
-  justify-content: space-evenly;
+#navContainer ul {
+  display: grid;
+  grid-auto-flow: column;
   padding-left: 0px;
 }
 
-#navList > li > a {
-  color: #333333;
+
+/* call to action */
+
+#callToActionContainer {
+  background-color: #495E57;
+  color: #EDEFEE;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  column-gap: 40px;
+  padding-bottom: 20px;
+  align-items: center;
 }
 
-@media (max-width: 1200px) {
-  #headerContainer {
-    grid-template-columns: 1fr 4fr 1fr;
-  }
-  #navContainer {
-    grid-column: 2 / 3;
-  }
-  #navList {
-    flex-flow: column;
-  }
+#callToActionText {
+  grid-column: 2/3;
+  text-align: left;
+}
+
+#callToActionText h1 {
+  color: #F4CE14;
+}
+
+#callToActionText p {
+  font-weight: medium;
+  font-size: 18px;
+}
+
+#callToActionText button {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+#callToActionImg {
+  grid-column: 3/4;
+  margin-top: 30px;
+}
+
+#callToActionImg img {
+  border-radius: 16px;
+  width: 250px;
+}
+
+/* specials */
+
+#specialsContainer {
+  display: grid;
+  grid-template-rows: auto 4fr;
+  grid-template-columns: 1fr 4fr 1fr;
+  row-gap: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#specialsHeader  {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  display: grid;
+  grid-auto-flow: column;
+  margin-bottom: 40px;
+}
+
+#specialsHeader h1 {
+  margin-top: 0px;
+}
+
+#specialsHeader > div {
+  margin-top: 15px;
+  text-align: right;
+}
+
+#specials  {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 40px;
+  justify-content: center;
+}
+
+#specials article {
+  background-color: #EDEFEE;
+  width: 250px;
+  text-align: left;
+  border-radius: 16px 16px 0px 0px;
+  overflow: hidden;
+  position:relative;
+}
+
+#specialItemText {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#specialItemText > div {
+  display: flex;
+  justify-content: space-between;
+}
+
+#specialItemText > div > h4{
+  margin-top: 10px;
+  margin-bottom: 15px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#specialItemText > div > div{
+  margin-top: 10px;
+  color: #EE9972;
+  font-size: 16px;
+  font-weight: medium;
+}
+
+#specialItemText > p:nth-of-type(1) {
+  font-size: 16px;
+  font-weight: normal;
+  color:#495E57;
+  padding-bottom: 50px;
+}
+
+#specialItemText > p:nth-of-type(2) {
+  font-size: 18px;
+  font-weight: medium;
+  color:#333333;
+  position: absolute;
+  bottom: 0;
+}
+
+/* customers */
+
+#customersContainer {
+  display: grid;
+  grid-template-rows: auto 2fr;
+  grid-template-columns: 1fr 4fr 1fr;
+  row-gap: 20px;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+#customersContainer > h2 {
+  grid-row: 1/2;
+  grid-column: 2/3;
+  text-align: center;
+}
+
+#customers  {
+  grid-row: 2/3;
+  grid-column: 2/3;
+  display: grid;
+  grid-auto-flow: column;
+  column-gap: 40px;
+  justify-content: center;
+}
+
+#customers article {
+  background-color: #EDEFEE;
+  width: 175px;
+  text-align: left;
+  border-radius: 16px;
+  overflow: hidden;
+  position:relative;
+}
+
+#customerImg {
+  height: 115px;
+  overflow: hidden;
+}
+
+#customerText {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#customerText > p:nth-of-type(1) {
+  font-size: 18px;
+  font-weight: medium;
+  color:#333333;
+}
+
+#customerText > p:nth-of-type(2) {
+  font-size: 16px;
+  font-weight: normal;
+  color:#495E57;
+}
+
+/* chicago */
+
+#chicagoContainer {
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr 1fr;
+  column-gap: 40px;
+  margin-top: 20px;
+  padding-bottom: 40px;
+  align-items: center;
+}
+
+#chicagoText {
+  grid-column: 2/3;
+  text-align: left;
+}
+
+#chicagoImg {
+  grid-column: 3/4;
+  margin-top: 30px;
+}
+
+#chicagoImg img {
+  border-radius: 16px;
+}
+
+#chicagoImg img:nth-of-type(1) {
+  position: relative;
+  margin-left: 25px;
+  margin-bottom: -25px;
+  z-index: 1;
+}
+
+#chicagoImg img:nth-of-type(2) {
+  position: relative;
+  margin-right: 25px;
+  z-index: 0;
 }
 
 /* footer */
@@ -69,30 +307,87 @@ a {
   padding-bottom: 20px;
 }
 
-#footerItems {
+#footerContainer > div {
   grid-column: 2 / 3;
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-auto-flow: column;
 }
 
-.footerHeading {
+#footerContainer h3 {
   font-size: 20px;
-  color: #333333;
 }
 
-.footerList {
-  text-align: center;
+#footerContainer ul {
   padding-left: 0px;
 }
 
-.footerList > li > a {
+#footerContainer li {
   font-size: 18px;
   color: #495E57;
 }
 
-@media (max-width: 1200px) {
-  #footerItems {
-    flex-flow: column;
+/* responsiveness */
+
+@media (max-width: 1100px) {
+  #navContainer ul {
+    grid-template-rows: 1fr 1fr;
+  }
+}
+
+@media (max-width: 900px) {
+  h1, h2 {
+    text-align: center;
+  }
+  #headerContainer {
+    grid-template-columns: 1fr 4fr 1fr;
+  }
+  #navContainer {
+    grid-column: 2 / 3;
+  }
+  #navContainer ul {
+    grid-auto-flow: row;
+  }
+  #callToActionContainer {
+    grid-template-columns: 1fr 4fr 1fr;
+  }
+  #callToActionText {
+    text-align: center;
+  }
+  #callToActionText p {
+    text-align: center;
+  }
+  #callToActionImg {
+    grid-column: 2/3;
+  }
+  #specialsHeader  {
+    grid-auto-flow: row;
+    row-gap: 30px;
+  }
+  #specialsHeader h1 {
+    text-align: center;
+  }
+  #specialsHeader > div {
+    text-align: center;
+  }
+  #specials  {
+    grid-auto-flow: row;
+    row-gap: 30px;
+  }
+  #customers  {
+    grid-auto-flow: row;
+    row-gap: 30px;
+  }
+  #chicagoContainer {
+    grid-template-columns: 1fr 4fr 1fr;
+  }
+  #chicagoText p {
+    text-align: center;
+  }
+  #chicagoImg {
+    grid-column: 2/3;
+  }
+  #footerContainer > div {
+    grid-auto-flow: row;
   }
 }
 
