@@ -6,16 +6,17 @@ import HomePage from './HomePage';
 import BookingForm from './BookingForm';
 import ConfirmedBooking from "./ConfirmedBooking";
 
-const updateTimes = (state, action) => {
+export const updateTimes = (state, action) => {
     if (action.type === "change") {
         const date = new Date(action.date);
         return fetchAPI(date);
         }
     }
 
-const initializeTimes = () => {
-    const now = new Date();
-    return fetchAPI(now);
+
+export const initializeTimes = () => {
+    const date = new Date();
+    return fetchAPI(date);
 }
 
 

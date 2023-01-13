@@ -1,3 +1,4 @@
+import {Link} from 'react-router-dom';
 import SpecialItem from "./SpecialItem";
 import Special1 from "../images/greek salad.jpg";
 import Special2 from "../images/bruchetta.jpg";
@@ -30,7 +31,9 @@ const Specials = () => {
             <div id="specialsHeader">
                 <h1>This weeks specials!</h1>
                 <div>
-                    <button>Online Menu</button>
+                    <Link to="/menu/">
+                        <button>Online Menu</button>
+                    </Link>
                 </div>
             </div>
             <div id="specials">
